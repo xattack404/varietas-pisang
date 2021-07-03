@@ -30,11 +30,11 @@
             </div>
             <div class="form-group">
               <label>Panjang</label>
-              <input type="text" name="panjang" class="form-control" value="{{ $data->panjang }}">
+              <input type="number" name="panjang" class="form-control" value="{{ $data->panjang }}">
             </div>
             <div class="form-group">
               <label>Diameter</label>
-              <input type="text" name="diameter" class="form-control" value="{{ $data->diameter }}">
+              <input type="number" name="diameter" class="form-control" value="{{ $data->diameter }}">
             </div>
             <div class="form-group">
               <label>Bentuk Buah</label>

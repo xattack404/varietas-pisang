@@ -29,11 +29,11 @@
             </div>
             <div class="form-group">
               <label>Panjang</label>
-              <input type="text" name="panjang" class="form-control">
+              <input type="number" name="panjang" class="form-control">
             </div>
             <div class="form-group">
               <label>Diameter</label>
-              <input type="text" name="diameter" class="form-control">
+              <input type="number" name="diameter" class="form-control">
             </div>
             <div class="form-group">
               <label>Bentuk Buah</label>
@@ -65,6 +65,8 @@
               <label>Id Varietas</label>
               <input type="text" name="id_varietas" class="form-control">
             </div>
+
+
             <div class="form-group">
               <button type="submit" class="btn btn-primary">SAVE</button>
             </div>

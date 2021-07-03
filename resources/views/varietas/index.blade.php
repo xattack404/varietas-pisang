@@ -35,7 +35,7 @@
                 <th scope="col">Bentuk</th>
                 <th scope="col">Panjang</th>
                 <th scope="col">Diameter</th>
-                <th scope="col">Bentuk_Buah</th>
+                <th scope="col">Bentuk Buah</th>
                 <th scope="col">Bentuk Daun</th>
                 <th scope="col">Bentuk Pohon</th>
                 <th scope="col">Gambar</th>

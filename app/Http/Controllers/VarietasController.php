@@ -37,8 +37,8 @@ class VarietasController extends Controller
      */
     public function store(Request $request)
     {
-        $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
-        $request->foto->move('gambar/', $fileName);
+        $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->gambar->getClientOriginalExtension();
+        $request->gambar->move('gambar/', $fileName);
         Varietas::create([
             'nama_pisang'        => $request->nama_pisang,
             'bentuk'             => $request->bentuk,

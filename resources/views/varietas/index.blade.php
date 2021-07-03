@@ -31,30 +31,30 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-              <th scope="col">Nama Pisang</th>
-              <th scope="col">Bentuk</th>
-              <th scope="col">Panjang</th>
-              <th scope="col">Diameter</th>
-              <th scope="col">Bentuk_Buah</th>
-              <th scope="col">Bentuk Daun</th>
-              <th scope="col">Bentuk Pohon</th>
-              <th scope="col">Gambar</th>
-              <th scope="col">ID Varietas</th>
-              <th scope="col">Action</th>
+                <th scope="col">Nama Pisang</th>
+                <th scope="col">Bentuk</th>
+                <th scope="col">Panjang</th>
+                <th scope="col">Diameter</th>
+                <th scope="col">Bentuk_Buah</th>
+                <th scope="col">Bentuk Daun</th>
+                <th scope="col">Bentuk Pohon</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">ID Varietas</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               @forelse($data as $varietas)
               <tr>
-              <td>{{ $varietas->nama_pisang}}</td>
-              <td>{{ $varietas->bentuk}}</td>
-              <td>{{ $varietas->panjang}}</td>
-              <td>{{ $varietas->diameter}}</td>
-              <td>{{ $varietas->bentuk_buah}}</td>
-              <td>{{ $varietas->bentuk_daun}}</td>
-              <td>{{ $varietas->bentuk_pohon }}</td>
-              <td><img src="{{ asset('foto/'. $varietas_pisang->gambar) }}" width='75' height='75'></td>
-              <td>{{ $varietas->id_varietas}}</td>
+                <td>{{ $varietas->nama_pisang}}</td>
+                <td>{{ $varietas->bentuk}}</td>
+                <td>{{ $varietas->panjang}}</td>
+                <td>{{ $varietas->diameter}}</td>
+                <td>{{ $varietas->bentuk_buah}}</td>
+                <td>{{ $varietas->bentuk_daun}}</td>
+                <td>{{ $varietas->bentuk_pohon }}</td>
+                <td><img src="{{ asset('gambar/'. $varietas->gambar) }}" width='75' height='75'></td>
+                <td>{{ $varietas->id_varietas}}</td>
                 <td>
                   <a href="{{ route('varietas.edit', ['id' => $varietas->id]) }}">
                     <button type="button" class="btn btn-sm btn-info">Edit</button>

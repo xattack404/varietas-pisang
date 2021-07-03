@@ -32,25 +32,15 @@
             <thead>
               <tr>
                 <th scope="col">Nama Pisang</th>
-                <th scope="col">Bentuk</th>
-                <th scope="col">Panjang</th>
-                <th scope="col">Diameter</th>
-                <th scope="col">Bentuk Luar</th>
-                <th scope="col">Gambar</th>
-                <th scope="col">Id Variates</th>
+                <th scope="col">Deskripsi</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               @forelse($data as $jenispisang)
               <tr>
-                <td>{{ $jenispisang->nama_pisang }}</td>
-                <td>{{ $jenispisang->bentuk }}</td>
-                <td>{{ $jenispisang->panjang}}</td>
-                <td>{{ $jenispisang->diameter}}</td>
-                <td>{{ $jenispisang->bentuk_luar}}</td>
-                <td>{{ $jenispisang->gambar}}</td>
-                <td>{{ $jenispisang->id_variates}}</td>
+                <td>{{ $jenispisang->nama_pisang}}</td>
+                <td>{{ $jenispisang->deskripsi}}</td>
                 <td>
                   <a href="{{ route('jenispisang.edit', ['id' => $jenispisang->id]) }}">
                     <button type="button" class="btn btn-sm btn-info">Edit</button>

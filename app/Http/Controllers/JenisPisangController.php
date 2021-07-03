@@ -38,12 +38,7 @@ class JenisPisangController extends Controller
     {
            JenisPisang::create([
                 'nama_pisang'     => $request->nama_pisang,
-                'bentuk'          => $request->bentuk,
-                'panjang'         => $request->panjang,
-                'diameter'        => $request->diameter,
-                'bentuk_luar'     => $request->bentuk_luar,
-                'gambar'          => $request->gambar,
-                'id_variates'     => $request->id_variates
+                'deskripsi'       => $request->deskripsi
                 ]);    
         return redirect()->route('jenispisang.index');
     }
@@ -82,12 +77,7 @@ class JenisPisangController extends Controller
     {
         JenisPisang::whereId($id)->update([
             'nama_pisang'     => $request->nama_pisang,
-                'bentuk'      => $request->bentuk,
-                'panjang'     => $request->panjang,
-                'diameter'    => $request->diameter,
-                'bentuk_luar' => $request->bentuk_luar,
-                'gambar'      => $request->gambar,
-                'id_variates' => $request->id_variates
+            'deskripsi'       => $request->deskripsi
         ]);
         return redirect()->route('jenispisang.index');
     }

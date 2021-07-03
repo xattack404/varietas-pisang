@@ -24,31 +24,10 @@
               <input type="text" name="nama_pisang" class="form-control">
             </div>
             <div class="form-group">
-              <label>Bentuk </label>
-              <input type="text" name="bentuk" class="form-control">
+              <label>Deskripsi</label>
+              <input type="text" name="deskripsi" class="form-control">
             </div>
-            <div class="form-group">
-              <label>Panjang</label>
-              <input type="text" name="panjang" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Diameter</label>
-              <input type="text" name="diameter" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Bentuk Luar</label>
-              <input type="text" name="bentuk_luar" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Gambar</label>
-              <input type="text" name="gambar" class="form-control">
-            </div>
-            <div class="form-group">
-              <label> Id Variates </label>
-              <input type="text" name="id_variates" class="form-control">
-            </div>
-
-
+            
             <div class="form-group">
               <button type="submit" class="btn btn-primary">SAVE</button>
             </div>

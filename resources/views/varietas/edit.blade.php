@@ -21,6 +21,26 @@
             <input type="hidden" name="_method" value="PUT">
             @csrf
             <div class="form-group">
+              <label>Nama Pisang</label>
+              <input type="text" name="nama_pisang" class="form-control" value="{{ $data->nama_pisang }}">
+            </div>
+            <div class="form-group">
+              <label>Bentuk</label>
+              <input type="text" name="bentuk" class="form-control" value="{{ $data->bentuk }}">
+            </div>
+            <div class="form-group">
+              <label>Panjang</label>
+              <input type="text" name="panjang" class="form-control" value="{{ $data->panjang }}">
+            </div>
+            <div class="form-group">
+              <label>Diameter</label>
+              <input type="text" name="diameter" class="form-control" value="{{ $data->diameter }}">
+            </div>
+            <div class="form-group">
+              <label>Bentuk Buah</label>
+              <input type="text" name="bentuk_buah" class="form-control" value="{{ $data->bentuk_buah }}">
+            </div>
+            <div class="form-group">
               <label>Bentuk Daun</label>
               <input type="text" name="bentuk_daun" class="form-control" value="{{ $data->bentuk_daun }}">
             </div>
@@ -29,8 +49,12 @@
               <input type="text" name="bentuk_pohon" class="form-control" value="{{ $data->bentuk_pohon }}">
             </div>
             <div class="form-group">
-              <label>Deskripsi</label>
-              <input type="number" name="deskripsi" class="form-control" value="{{ $data->deskripsi }}">
+              <label>Gambar</label>
+              <input type="text" name="gambar" class="form-control" value="{{ $data->gambar }}">
+            </div>
+            <div class="form-group">
+              <label>Id Varietas</label>
+              <input type="text" name="varietas" class="form-control" value="{{ $data->varietas }}">
             </div>
         </div>
         <div class="form-group">

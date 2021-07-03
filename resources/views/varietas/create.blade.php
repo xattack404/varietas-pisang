@@ -20,6 +20,26 @@
           <form action="{{ route('varietas.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+              <label>Nama Pisang</label>
+              <input type="text" name="nama_pisang" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Bentuk</label>
+              <input type="text" name="bentuk" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Panjang</label>
+              <input type="text" name="panjang" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Diameter</label>
+              <input type="text" name="diameter" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Bentuk Buah</label>
+              <input type="text" name="bentuk_buah" class="form-control">
+            </div>
+            <div class="form-group">
               <label>Bentuk Daun</label>
               <input type="text" name="bentuk_daun" class="form-control">
             </div>
@@ -28,10 +48,13 @@
               <input type="text" name="bentuk_pohon" class="form-control">
             </div>
             <div class="form-group">
-              <label>Deskripsi</label>
-              <input type="text" name="deskripsi" class="form-control">
+              <label>Gambar</label>
+              <input type="text" name="gambar" class="form-control">
             </div>
-
+            <div class="form-group">
+              <label>Id Varietas</label>
+              <input type="text" name="id_varietas" class="form-control">
+            </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary">SAVE</button>
             </div>

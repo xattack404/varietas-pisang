@@ -38,9 +38,15 @@ class VarietasController extends Controller
     public function store(Request $request)
     {
         Varietas::create([
+            'nama_pisang'        => $request->nama_pisang,
+            'bentuk'             => $request->bentuk,
+            'panjang'            => $request->panjang,
+            'diameter'           => $request->diameter,
+            'bentuk_buah'        => $request->bentuk_buah,
             'bentuk_daun'        => $request->bentuk_daun,
             'bentuk_pohon'       => $request->bentuk_pohon,
-            'deskripsi'          => $request->deskripsi
+            'gambar'             => $request->gambar,
+            'id_varietas'        => $request->id_varietas
         ]);
         return redirect()->route('varietas.index');
     }
@@ -78,9 +84,15 @@ class VarietasController extends Controller
     public function update(Request $request, $id)
     {
         Varietas::whereId($id)->update([
+            'nama_pisang'        => $request->nama_pisang,
+            'bentuk'             => $request->bentuk,
+            'panjang'            => $request->panjang,
+            'diameter'           => $request->diameter,
+            'bentuk_buah'        => $request->bentuk_buah,
             'bentuk_daun'        => $request->bentuk_daun,
             'bentuk_pohon'       => $request->bentuk_pohon,
-            'deskirpsi'          => $request->deskirpsi
+            'gambar'             => $request->gambar,
+            'id_varietas'        => $request->id_varietas
         ]);
         return redirect()->route('varietas.index');
     }

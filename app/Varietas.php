@@ -9,7 +9,14 @@ class Varietas extends Model
     protected $table = 'varietas';
     protected $fillable = [
         'nama_pisang',
-        'deskripsi'
+        'bentuk',
+        'panjang',
+        'diameter',
+        'bentuk_buah',
+        'bentuk_daun',
+        'bentuk_pohon',
+        'gambar',
+        'id_varietas'
     ];
 
     public $timestamps = false;

@@ -77,7 +77,7 @@ class JenisPisangController extends Controller
     {
         JenisPisang::whereId($id)->update([
             'nama_pisang'     => $request->nama_pisang,
-            'deskripsi'       => $request->deskripsi
+            'deskripsi' => $request->deskripsi
         ]);
         return redirect()->route('jenispisang.index');
     }

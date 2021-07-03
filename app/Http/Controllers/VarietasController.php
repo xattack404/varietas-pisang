@@ -37,11 +37,11 @@ class VarietasController extends Controller
      */
     public function store(Request $request)
     {
-           Varietas::create([
-                'bentuk_daun'        => $request->bentuk_daun,
-                'bentuk_pohon'       => $request->bentuk_pohon,
-                'deskirpsi'          => $request->deskirpsi
-                ]);    
+        Varietas::create([
+            'bentuk_daun'        => $request->bentuk_daun,
+            'bentuk_pohon'       => $request->bentuk_pohon,
+            'deskripsi'          => $request->deskripsi
+        ]);
         return redirect()->route('varietas.index');
     }
 
@@ -65,7 +65,7 @@ class VarietasController extends Controller
     public function edit($id)
     {
         $data = Varietas::find($id);
-        return view('varietas.edit',compact('data'));
+        return view('varietas.edit', compact('data'));
     }
 
     /**
@@ -95,5 +95,4 @@ class VarietasController extends Controller
         Varietas::whereId($id)->delete();
         return redirect()->route('varietas.index');
     }
-    
 }

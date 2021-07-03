@@ -31,12 +31,9 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th scope="col">Nama</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">No Telepon</th>
-                <th scope="col">Email</th>
-                <th scope="col">Rekening</th>
-                <th scope="col">Nama Bank</th>
+                <th scope="col">Bentuk Daun</th>
+                <th scope="col">Bentuk Pohon</th>
+                <th scope="col">Deksripsi</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>

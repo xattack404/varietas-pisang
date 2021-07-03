@@ -37,6 +37,8 @@ class VarietasController extends Controller
      */
     public function store(Request $request)
     {
+        $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
+        $request->foto->move('gambar/', $fileName);
         Varietas::create([
             'nama_pisang'        => $request->nama_pisang,
             'bentuk'             => $request->bentuk,
@@ -45,7 +47,7 @@ class VarietasController extends Controller
             'bentuk_buah'        => $request->bentuk_buah,
             'bentuk_daun'        => $request->bentuk_daun,
             'bentuk_pohon'       => $request->bentuk_pohon,
-            'gambar'             => $request->gambar,
+            'gambar'             => $fileName,
             'id_varietas'        => $request->id_varietas
         ]);
         return redirect()->route('varietas.index');
@@ -83,6 +85,8 @@ class VarietasController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
+        $request->foto->move('gambar/', $fileName);
         Varietas::whereId($id)->update([
             'nama_pisang'        => $request->nama_pisang,
             'bentuk'             => $request->bentuk,
@@ -91,7 +95,7 @@ class VarietasController extends Controller
             'bentuk_buah'        => $request->bentuk_buah,
             'bentuk_daun'        => $request->bentuk_daun,
             'bentuk_pohon'       => $request->bentuk_pohon,
-            'gambar'             => $request->gambar,
+            'gambar'             => $fileName,
             'id_varietas'        => $request->id_varietas
         ]);
         return redirect()->route('varietas.index');
@@ -104,6 +108,11 @@ class VarietasController extends Controller
      */
     public function delete($id)
     {
+        $data = Varietas::find($id);
+        if (\File::exists(public_path('foto/' . $data->foto))) {
+
+            \File::delete(public_path('foto/' . $data->foto));
+        }
         Varietas::whereId($id)->delete();
         return redirect()->route('varietas.index');
     }

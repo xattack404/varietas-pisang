@@ -53,7 +53,7 @@
               <td>{{ $varietas->bentuk_buah}}</td>
               <td>{{ $varietas->bentuk_daun}}</td>
               <td>{{ $varietas->bentuk_pohon }}</td>
-              <td>{{ $varietas->gambar}}</td>
+              <td><img src="{{ asset('foto/'. $varietas_pisang->gambar) }}" width='75' height='75'></td>
               <td>{{ $varietas->id_varietas}}</td>
                 <td>
                   <a href="{{ route('varietas.edit', ['id' => $varietas->id]) }}">

@@ -1,4 +1,4 @@
-@extends('layouts.adminmain')
+@extends('layouts.main')
 @section('content')
 <section class="section">
 
@@ -43,10 +43,10 @@
               <label>Gambar</label>
               <input type="text" name="gambar" class="form-control">
             </div>
-              <div class="form-group">
-                    <label> Id Variates </label>
-                    <input type="text" name="id_variates" class="form-control">
-                </div>
+            <div class="form-group">
+              <label> Id Variates </label>
+              <input type="text" name="id_variates" class="form-control">
+            </div>
 
 
             <div class="form-group">
@@ -59,4 +59,3 @@
   </div>
 </section>
 @endsection()
-

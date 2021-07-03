@@ -1,4 +1,4 @@
-@extends('layouts.adminmain')
+@extends('layouts.main')
 @section('content')
 <section class="section">
 
@@ -17,7 +17,7 @@
           </a>
         </div>
         <div class="card-body">
-        <form action="{{ route('varietas.update', ['id' => $data->id]) }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('varietas.update', ['id' => $data->id]) }}" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT">
             @csrf
             <div class="form-group">

@@ -19,7 +19,7 @@
             </li>
             <li class="menu-header">Data 2</li>
             <li class="">
-                <a class="nav-link" href="#"><i class="fas fa-money-check-alt"></i> <span>Data B</span></a>
+                <a class="nav-link" href="{{ route('cekpisang.index') }}"><i class="fas fa-newspaper"></i> <span>Cek Jenis Pisang</span></a>
             </li>
         </ul>
     </aside>

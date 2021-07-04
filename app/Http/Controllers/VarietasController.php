@@ -90,8 +90,7 @@ class VarietasController extends Controller
         $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
         $request->foto->move('gambar/', $fileName);
         Varietas::whereId($id)->update([
-            'nama_pisang'        => $request->nama_pisang,
-            'bentuk'             => $request->bentuk,
+            'warna'             => $request->warna,
             'panjang'            => $request->panjang,
             'diameter'           => $request->diameter,
             'bentuk_buah'        => $request->bentuk_buah,

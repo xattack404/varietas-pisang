@@ -87,6 +87,18 @@ class VarietasController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if (empty($request->foto)) {
+            Varietas::whereId($id)->update([
+                'warna'              => $request->warna,
+                'panjang'            => $request->panjang,
+                'diameter'           => $request->diameter,
+                'bentuk_buah'        => $request->bentuk_buah,
+                'bentuk_daun'        => $request->bentuk_daun,
+                'bentuk_pohon'       => $request->bentuk_pohon,
+                'id_jenis'        => $request->jenis_pisang
+            ]);
+            return redirect()->route('varietas.index');
+        }
         $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->foto->getClientOriginalExtension();
         $request->foto->move('gambar/', $fileName);
         Varietas::whereId($id)->update([

@@ -55,11 +55,11 @@
 
             <div class="form-group">
               <label>Gambar Sebelumnya</label><br />
-              <img src="{{ asset('foto/'. $data['varietas_pisang']->gambar) }}" width='150' height='150'>
+              <img src="{{ asset('gambar/'. $data['varietas_pisang']->gambar) }}" width='150' height='150'>
             </div>
             <div class="form-group">
               <label>* Foto Baru</label> <br>
-              <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')"  />
+              <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" />
             </div>
             <div class="form-group">
               <b>Preview Gambar</><br>

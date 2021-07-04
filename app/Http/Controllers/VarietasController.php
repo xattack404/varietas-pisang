@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\JenisPisang;
 use Illuminate\Http\Request;
 use App\Varietas;
 
@@ -26,7 +27,8 @@ class VarietasController extends Controller
      */
     public function create()
     {
-        return view('varietas.create');
+        $data = JenisPisang::All();
+        return view('varietas.create', compact('data'));
     }
 
     /**
@@ -40,15 +42,14 @@ class VarietasController extends Controller
         $fileName = 'variates_pisang-' . date('Ymdhis') . '.' . $request->gambar->getClientOriginalExtension();
         $request->gambar->move('gambar/', $fileName);
         Varietas::create([
-            'nama_pisang'        => $request->nama_pisang,
-            'bentuk'             => $request->bentuk,
+            'warna'             => $request->warna,
             'panjang'            => $request->panjang,
             'diameter'           => $request->diameter,
             'bentuk_buah'        => $request->bentuk_buah,
             'bentuk_daun'        => $request->bentuk_daun,
             'bentuk_pohon'       => $request->bentuk_pohon,
             'gambar'             => $fileName,
-            'id_varietas'        => $request->id_varietas
+            'id_jenis'        => $request->jenis_pisang
         ]);
         return redirect()->route('varietas.index');
     }
@@ -72,7 +73,8 @@ class VarietasController extends Controller
      */
     public function edit($id)
     {
-        $data = Varietas::find($id);
+        $data['varietas_pisang'] = Varietas::find($id);
+        $data['jenis_pisang'] = JenisPisang::All();
         return view('varietas.edit', compact('data'));
     }
 

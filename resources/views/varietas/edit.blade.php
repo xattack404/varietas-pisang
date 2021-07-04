@@ -22,7 +22,7 @@
             @csrf
             <div class="form-group">
               <label>Jenis Pisang</label>
-              <select required name="kategori" class="form-control" data-live-search="true">
+              <select required name="jenis_pisang" class="form-control" data-live-search="true">
                 @foreach($data['jenis_pisang'] as $jenis)
                 <option value="{{ $jenis->id }}" {{ ($data['varietas_pisang']->id_jenis == $jenis->id) ? 'selected' : '' }}>{{ $jenis->nama_pisang }} </option>
                 @endforeach
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
               <label>* Foto Baru</label> <br>
-              <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')" required />
+              <input type="file" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')"  />
             </div>
             <div class="form-group">
               <b>Preview Gambar</><br>

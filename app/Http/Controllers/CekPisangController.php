@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CekPisang;
+use App\Varietas;
+use App\JenisPisang;
 
 class CekPisangController extends Controller
 {
@@ -18,6 +20,19 @@ class CekPisangController extends Controller
         return view('cekpisang.index', compact('data'));
     }
 
+    public function prosescek(Request $request)
+    {
+        $data = Varietas::select('*')
+            ->where([
+                'bentuk_buah' => $request->bentuk_buah,
+                'bentuk_daun' => $request->bentuk_daun,
+                'warna' => $request->warna
+            ])
+            ->groupBy('bentuk_buah')
+            ->orderByRaw('COUNT(*) DESC')
+            ->limit(1);
+        return view('cekpisang.hasil', compact('data'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -36,7 +51,7 @@ class CekPisangController extends Controller
      */
     public function store(Request $request)
     {
-           CekPisang::create([
+        CekPisang::create([
             'warna'              => $request->warna,
             'panjang'            => $request->panjang,
             'diameter'           => $request->diameter,
@@ -45,7 +60,7 @@ class CekPisangController extends Controller
             'bentuk_pohon'       => $request->bentuk_pohon,
             'id_jenis'        => $request->jenis_pisang
 
-                ]);    
+        ]);
         return redirect()->route('cekpisang.index');
     }
 
@@ -69,7 +84,7 @@ class CekPisangController extends Controller
     public function edit($id)
     {
         $data = CekPisang::find($id);
-        return view('cekpisang.edit',compact('data'));
+        return view('cekpisang.edit', compact('data'));
     }
 
     /**
@@ -98,5 +113,4 @@ class CekPisangController extends Controller
         CekPisang::whereId($id)->delete();
         return redirect()->route('cekpisang.index');
     }
-    
 }

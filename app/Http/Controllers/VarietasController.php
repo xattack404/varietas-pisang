@@ -77,6 +77,11 @@ class VarietasController extends Controller
         $data['jenis_pisang'] = JenisPisang::All();
         return view('varietas.edit', compact('data'));
     }
+    public function tampil()
+    {
+        $data = Varietas::All();
+        return view('cekpisang.index', compact('data'));
+    }
 
     /**
      * Update the specified resource in storage.

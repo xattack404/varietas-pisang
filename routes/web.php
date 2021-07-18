@@ -39,8 +39,4 @@ Route::get('panel/varietas/delete/{id}', ['as' => 'varietas.delete', 'uses' => '
 
 //Route Menu Cek Jenis Pisang
 Route::get('panel/cekpisang', ['as' => 'cekpisang.index', 'uses' => 'CekPisangController@index']);
-Route::get('panel/cekpisang/create', ['as' => 'cekpisang.create', 'uses' => 'CekPisangController@create']);
-Route::post('panel/cekpisang/create', ['as' => 'cekpisang.store', 'uses' => 'CekPisangController@store']);
-Route::get('panel/cekpisang/edit/{id}', ['as' => 'cekpisang.edit', 'uses' => 'CekPisangController@edit']);
-Route::put('panel/cekpisang/edit/{id}', ['as' => 'cekpisang.update', 'uses' => 'CekPisangController@update']);
-Route::get('panel/cekpisang/delete/{id}', ['as' => 'cekpisang.delete', 'uses' => 'CekPisangController@delete']);
+Route::put('panel/cekpisang/proses', ['as' => 'cekpisang.proses', 'uses' => 'CekPisangController@prosescek']);

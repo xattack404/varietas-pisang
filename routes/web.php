@@ -39,4 +39,4 @@ Route::get('panel/varietas/delete/{id}', ['as' => 'varietas.delete', 'uses' => '
 
 //Route Menu Cek Jenis Pisang
 Route::get('panel/cekpisang', ['as' => 'cekpisang.index', 'uses' => 'CekPisangController@index']);
-Route::put('panel/cekpisang/proses', ['as' => 'cekpisang.proses', 'uses' => 'CekPisangController@prosescek']);
+Route::get('panel/cekpisang/proses', ['as' => 'cekpisang.proses', 'uses' => 'CekPisangController@prosescek']);

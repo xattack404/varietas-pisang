@@ -18,7 +18,6 @@
                 </div>
                 <div class="card-body">
                     <form action="{{ route('cekpisang.proses') }}" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="_method" value="PUT">
                         @csrf
                         <div class="form-group">
                             <label>Bentuk Buah</label>

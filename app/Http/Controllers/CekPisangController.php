@@ -22,15 +22,14 @@ class CekPisangController extends Controller
 
     public function prosescek(Request $request)
     {
-        $data = Varietas::select('*')
-            ->where([
-                'bentuk_buah' => $request->bentuk_buah,
-                'bentuk_daun' => $request->bentuk_daun,
-                'warna' => $request->warna
-            ])
-            ->groupBy('bentuk_buah')
-            ->orderByRaw('COUNT(*) DESC')
-            ->limit(1);
+        $data = Varietas::where([
+            'bentuk_buah' => $request->bentuk_buah,
+            'bentuk_daun' => $request->bentuk_daun,
+            'warna' => $request->warna
+        ])
+            ->groupBy('bentuk_buah');
+        // ->orderByRaw('COUNT(*) DESC')
+        // ->limit(1);
         return view('cekpisang.hasil', compact('data'));
     }
     /**

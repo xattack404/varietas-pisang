@@ -28,14 +28,14 @@
                 <tbody>
                   @forelse($data as $hasil)
                   <tr>
-                    <td>{{ $hasil->warna}}</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
-                    <td> Hasil</td>
+                    <td>{{ $hasil->RelasiJenisPisang->nama_pisang }}</td>
+                    <td><img src="{{ asset('gambar/'. $hasil->gambar) }}" width='75' height='75'></td>
+                    <td> {{ $hasil->bentuk_buah }}</td>
+                    <td> {{ $hasil->panjang }}</td>
+                    <td> {{ $hasil->diameter }}</td>
+                    <td> {{ $hasil->bentuk_daun }}</td>
+                    <td> {{ $hasil->bentuk_pohon }}</td>
+                    <td> {{ $hasil->RelasiJenisPisang->deskripsi }}</td>
                   </tr>
                   @empty
                   <tr>

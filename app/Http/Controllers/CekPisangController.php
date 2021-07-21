@@ -26,8 +26,8 @@ class CekPisangController extends Controller
             'bentuk_buah' => $request->bentuk_buah,
             'bentuk_daun' => $request->bentuk_daun,
             'warna' => $request->warna
-        ])
-            ->groupBy('bentuk_buah');
+        ])->get();
+        // ->groupBy('bentuk_buah');
         // ->orderByRaw('COUNT(*) DESC')
         // ->limit(1);
         return view('cekpisang.hasil', compact('data'));

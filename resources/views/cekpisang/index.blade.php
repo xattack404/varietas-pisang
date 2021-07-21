@@ -3,7 +3,7 @@
 <section class="section">
 
     <div class="section-header">
-        <h1> Varietas <small>Tambah Data</small></h1>
+        <h1> Varietas <small>Cek Data</small></h1>
     </div>
 
     <div class="section-body">
@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('cekpisang.proses') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('cekpisang.proses') }}" method="GET" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Bentuk Buah</label>
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">SAVE</button>
+                            <button type="submit" class="btn btn-primary">CEK</button>
                         </div>
                     </form>
                 </div>
